@@ -9,11 +9,11 @@ import {IMail} from '../../interfaces/IMail';
 export class MailFolderComponent implements OnInit {
 
   messages: IMail[] = [{
-    'id': 1,
-    'folder': 'inbox',
-    'from': 'Jane Smith',
-    'summary': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis, neque at ultricies fringilla, ligula metus',
-    'timestamp': 1487848162905
+    id: 1,
+    folder: 'inbox',
+    from: 'Jane Smith',
+    summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis, neque at ultricies fringilla, ligula metus',
+    timestamp: 1487848162905
   }];
 
   constructor() {

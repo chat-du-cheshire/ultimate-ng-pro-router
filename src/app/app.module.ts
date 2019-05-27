@@ -11,8 +11,8 @@ import {MailModule} from './modules/mail/mail.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MailModule
+    MailModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
