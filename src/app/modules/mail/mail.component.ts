@@ -14,4 +14,7 @@ export class MailComponent implements OnInit {
   ngOnInit() {
   }
 
+  onActivate($event) { console.log('Activate -> ', $event); }
+  onDeactivate($event) { console.log('Deactivate -> ', $event); }
+
 }
