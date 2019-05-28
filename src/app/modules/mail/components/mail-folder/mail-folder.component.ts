@@ -12,6 +12,7 @@ import {ActivatedRoute} from '@angular/router';
 export class MailFolderComponent implements OnInit {
 
   messages$: Observable<IMail[]> = this.route.data.pipe(pluck('messages'));
+  title$: Observable<IMail[]> = this.route.params.pipe(pluck('name'));
 
   constructor(private route: ActivatedRoute) {
   }

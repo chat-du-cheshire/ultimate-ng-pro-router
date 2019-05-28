@@ -5,9 +5,10 @@ import {MailRoutingModule} from './mail-routing.module';
 import { MailItemComponent } from './components/mail-item/mail-item.component';
 import { MailFolderComponent } from './components/mail-folder/mail-folder.component';
 import {HttpClientModule} from '@angular/common/http';
+import { MailViewComponent } from './components/mail-view/mail-view.component';
 
 @NgModule({
-  declarations: [MailComponent, MailItemComponent, MailFolderComponent],
+  declarations: [MailComponent, MailItemComponent, MailFolderComponent, MailViewComponent],
   imports: [
     CommonModule,
     HttpClientModule,
