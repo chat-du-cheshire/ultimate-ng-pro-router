@@ -8,6 +8,10 @@ import {environment} from '../../../../environments/environment';
 export class MessagesService {
   constructor(protected http: HttpClient) {}
 
+  get(id: string): Observable<IMail> {
+    return this.http.get<IMail>(`${environment.api}/messages/${id}`);
+  }
+
   getFolderMessages(folder: string): Observable<IMail[]> {
     const params = new HttpParams({fromObject: {folder}});
     return this.http.get<IMail[]>(`${environment.api}/messages`, {params});

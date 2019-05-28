@@ -1,4 +1,4 @@
-<div class="mail-view">
-    <h2>{{id$ | async}}</h2>
-    <p></p>
+<div class="mail-view" *ngIf="message$ | async as message">
+    <h2>{{message.from}}</h2>
+    <p>{{message.summary}}</p>
 </div>

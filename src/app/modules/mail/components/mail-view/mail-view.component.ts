@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {pluck} from 'rxjs/operators';
+import {Observable} from 'rxjs';
+import {IMail} from '../../interfaces/IMail';
 
 @Component({
   selector: 'mail-view',
@@ -9,7 +11,7 @@ import {pluck} from 'rxjs/operators';
 })
 export class MailViewComponent implements OnInit {
 
-  id$ = this.route.params.pipe(pluck('id'))
+  message$: Observable<IMail> = this.route.data.pipe(pluck('message'));
 
   constructor(private route: ActivatedRoute) { }
 
