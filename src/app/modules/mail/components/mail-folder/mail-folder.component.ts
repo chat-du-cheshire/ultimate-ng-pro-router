@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {IMail} from '../../interfaces/IMail';
+import {Observable} from 'rxjs';
+import {pluck} from 'rxjs/operators';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'mail-folder',
@@ -8,15 +11,9 @@ import {IMail} from '../../interfaces/IMail';
 })
 export class MailFolderComponent implements OnInit {
 
-  messages: IMail[] = [{
-    id: 1,
-    folder: 'inbox',
-    from: 'Jane Smith',
-    summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis, neque at ultricies fringilla, ligula metus',
-    timestamp: 1487848162905
-  }];
+  messages$: Observable<IMail[]> = this.route.data.pipe(pluck('messages'));
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
   }
 
   ngOnInit() {
