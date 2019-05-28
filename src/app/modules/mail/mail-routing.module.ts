@@ -6,14 +6,17 @@ import {MessagesResolver} from './services/messages.resolver';
 import {MessagesService} from './services/messages.service';
 import {MailViewComponent} from './components/mail-view/mail-view.component';
 import {MessageResolver} from './services/message.resolver';
+import {MailComponent} from './mail.component';
 
-const routes: Routes = [
-  {
+const routes: Routes = [{
+  path: 'mail',
+  component: MailComponent,
+  children: [{
     path: 'folder/:name', component: MailFolderComponent, resolve: {messages: MessagesResolver}
   }, {
     path: 'messages/:id', component: MailViewComponent, outlet: 'pane', resolve: {message: MessageResolver}
-  }
-];
+  }]
+}];
 
 @NgModule({
   declarations: [],
