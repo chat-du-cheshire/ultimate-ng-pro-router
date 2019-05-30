@@ -4,7 +4,7 @@ import {of} from 'rxjs';
 @Injectable()
 export class AuthService {
   loggedIn = false;
-  user = { isAdmin: true };
+  user = { isAdmin: false };
   checkPermissions() {
     return of(this.user.isAdmin);
   }
@@ -14,5 +14,9 @@ export class AuthService {
 
   toggleLogin() {
     this.loggedIn = !this.loggedIn;
+  }
+
+  togglePermissions() {
+    this.user.isAdmin = !this.user.isAdmin;
   }
 }
