@@ -6,11 +6,13 @@ import { MailItemComponent } from './components/mail-item/mail-item.component';
 import { MailFolderComponent } from './components/mail-folder/mail-folder.component';
 import {HttpClientModule} from '@angular/common/http';
 import { MailViewComponent } from './components/mail-view/mail-view.component';
+import {AuthModule} from '../auth/auth.module';
 
 @NgModule({
   declarations: [MailComponent, MailItemComponent, MailFolderComponent, MailViewComponent],
   imports: [
     CommonModule,
+    AuthModule,
     HttpClientModule,
     MailRoutingModule
   ],

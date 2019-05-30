@@ -7,10 +7,12 @@ import {MessagesService} from './services/messages.service';
 import {MailViewComponent} from './components/mail-view/mail-view.component';
 import {MessageResolver} from './services/message.resolver';
 import {MailComponent} from './mail.component';
+import {AuthGuard} from '../auth/services/auth.guard';
 
 const routes: Routes = [{
   path: 'mail',
   component: MailComponent,
+  canActivateChild: [AuthGuard],
   children: [{
     path: 'folder/:name', component: MailFolderComponent, resolve: {messages: MessagesResolver}
   }, {

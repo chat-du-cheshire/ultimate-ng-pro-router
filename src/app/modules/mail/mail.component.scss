@@ -3,10 +3,18 @@
   width: 100%;
 }
 
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 6px 30px 20px;
+  text-transform: capitalize;
+}
+
 nav {
   flex: 0 0 15%;
   padding: 20px 0;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+
   a {
     display: block;
     margin-bottom: 10px;
@@ -15,6 +23,7 @@ nav {
     text-decoration: none;
     font-size: 16px;
     border-left: 3px solid transparent;
+
     &.active {
       color: rgba(0, 0, 0, 0.8);
       border-left-color: #9f72e6;
