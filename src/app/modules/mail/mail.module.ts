@@ -7,9 +7,11 @@ import { MailFolderComponent } from './components/mail-folder/mail-folder.compon
 import {HttpClientModule} from '@angular/common/http';
 import { MailViewComponent } from './components/mail-view/mail-view.component';
 import {AuthModule} from '../auth/auth.module';
+import {MailGuard} from './services/mail.guard';
 
 @NgModule({
   declarations: [MailComponent, MailItemComponent, MailFolderComponent, MailViewComponent],
+  providers: [MailGuard],
   imports: [
     CommonModule,
     AuthModule,
