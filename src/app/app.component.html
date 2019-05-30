@@ -1,6 +1,7 @@
 <div class="app">
     <header>
         <img src="/assets/img/logo.svg">
+        <button (click)="auth.toggleLogin()">{{auth.loggedIn ? 'Log out' : 'Log in'}}</button>
     </header>
     <div class="app__content">
         <nav>
